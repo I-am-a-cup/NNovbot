@@ -100,7 +100,6 @@ NNovBot/
 ├── cultural_objects_mnn.xlsx           # Database with places
 ├── embeddings_cultural_sites.npz       # Cached embeddings (auto-generated)
 ├── .env                                # Environment variables (create this)
-├── .env.example                        # Example env file
 ├── .gitignore                          # Git ignore rules
 ├── requirements.txt                    # Python dependencies
 └── README.md                           # This file
