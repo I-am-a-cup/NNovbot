@@ -27,7 +27,6 @@ AI-powered Telegram bot that creates personalized walking routes around Nizhny N
 
 - Python 3.10 or higher
 - Telegram account
-- OpenRouter API key ([get one here](https://openrouter.ai/))
 - Excel database with cultural objects (included: `cultural_objects_mnn.xlsx`)
 
 ## 🚀 Quick Start
