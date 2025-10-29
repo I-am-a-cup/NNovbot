@@ -174,7 +174,15 @@ async def ask_gpt_async(query: str, context: str = "", system_prompt: str = None
     if not system_prompt:
         system_prompt = "Ты помощник туриста по Нижнему Новгороду. ВСЕГДА указывай точный адрес. БЕЗ ТАБЛИЦ, без маркеров, без форматирования."
     
-    headers = {"Authorization": f"Bearer {OPENROUTER_API_KEY}", "Content-Type": "application/json"}
+    # FIXED: Added HTTP-Referer and User-Agent headers
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://github.com",  # Required by OpenRouter
+        "X-Title": "NN-Tourist-Bot",  # Optional but recommended
+        "User-Agent": "Mozilla/5.0 (NN-Tourist-Bot/1.0)"
+    }
+    
     payload = {
         "model": MODEL_CHAT,
         "messages": [
@@ -203,6 +211,19 @@ async def ask_gpt_async(query: str, context: str = "", system_prompt: str = None
                             return answer.strip()
                     else:
                         logging.warning(f"HTTP {response.status}")
+                        
+                        # IMPROVED: Better error logging
+                        try:
+                            error_data = await response.json()
+                            logging.error(f"OpenRouter Error: {error_data}")
+                        except:
+                            error_text = await response.text()
+                            logging.error(f"OpenRouter Response: {error_text}")
+                        
+                        if response.status == 401:
+                            logging.error("⚠️ 401 Unauthorized - Check your OpenRouter API key!")
+                            raise Exception("Authentication failed - Invalid OpenRouter API key")
+                        
                         if response.status == 429 and attempt < MAX_RETRIES - 1:
                             await asyncio.sleep(RETRY_DELAY * (2 ** attempt))
                             continue
@@ -211,7 +232,7 @@ async def ask_gpt_async(query: str, context: str = "", system_prompt: str = None
                             continue
         except Exception as e:
             if attempt < MAX_RETRIES - 1:
-                logging.warning(f"Ошибка: {e}")
+                logging.warning(f"Ошибка (попытка {attempt + 1}): {e}")
                 await asyncio.sleep(RETRY_DELAY)
                 continue
             raise
