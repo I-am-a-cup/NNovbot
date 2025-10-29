@@ -463,71 +463,8 @@ screen -r nnovbot
 screen -X -S nnovbot quit
 ```
 
-## 🤝 Участие в разработке
-
-Вклад в проект приветствуется! 
-
-**Как помочь:**
-1. 🍴 Fork репозиторий
-2. 🌿 Создай ветку: `git checkout -b feature/amazing-feature`
-3. 💾 Закоммить: `git commit -m 'Add amazing feature'`
-4. 📤 Push: `git push origin feature/amazing-feature`
-5. 🔀 Открой Pull Request
-
-**Идеи для улучшений:**
-- [ ] Webhook вместо polling (для production)
-- [ ] PostgreSQL вместо Excel
-- [ ] Интерактивные карты (Yandex/Google Maps)
-- [ ] Экспорт маршрутов в PDF или GPX
-- [ ] Фотографии мест
-- [ ] Мультиязычность (EN, CN)
-- [ ] История запросов пользователя
-- [ ] Рейтинги и отзывы на места
-- [ ] Погода и время работы мест
-- [ ] Маршруты на общественном транспорте
-
 ## 📝 Лицензия
 
 MIT License — можешь использовать в коммерческих и личных проектах.
 
 См. файл [LICENSE](LICENSE) для деталей.
-
-## 👨‍💻 Автор
-
-**Твоё Имя**  
-GitHub: [@yourusername](https://github.com/yourusername)  
-Telegram: [@yourusername](https://t.me/yourusername)  
-Email: your@email.com
-
-## 📞 Контакты
-
-- 🐛 **Нашёл баг?** [Открой Issue](https://github.com/yourusername/NNovBot/issues/new)
-- 💡 **Есть идея?** [Создай Discussion](https://github.com/yourusername/NNovBot/discussions)
-- 💬 **Вопросы?** Напиши в Telegram: [@yourusername](https://t.me/yourusername)
-- 📧 **Email:** your@email.com
-
-## 🙏 Благодарности
-
-- 📊 **База данных** — открытые данные Нижнего Новгорода
-- 🤖 **AI модели** — [OpenRouter](https://openrouter.ai/) и [OpenAI](https://openai.com/)
-- 💙 **Сообщество** — [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
-- 🎨 **Вдохновение** — туристы и гиды Нижнего Новгорода
-
-## 📈 Статистика
-
-![GitHub stars](https://img.shields.io/github/stars/yourusername/NNovBot?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/NNovBot?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/NNovBot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/NNovBot)
-
----
-
-**⭐ Если проект понравился, поставь звезду!**
-
-**🔄 Хочешь следить за обновлениями? Нажми Watch в верхнем правом углу**
-
-**Спасибо что используешь NNovBot! 🎉🏛️**
-
----
-
-<sub>Создано с ❤️ для Нижнего Новгорода | 2025</sub>
