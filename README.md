@@ -304,9 +304,6 @@ Contributions welcome! Please:
 
 This project is open source and available under the MIT License.
 
-## 👨‍💻 Author
-
-Your Name - [@yourusername](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
@@ -317,7 +314,3 @@ Your Name - [@yourusername](https://github.com/yourusername)
 ---
 
 **⭐ Star this repository if you find it helpful!**
-
-**🐛 Found a bug? [Open an issue](https://github.com/yourusername/NNovBot/issues)**
-
-**💬 Have questions? [Start a discussion](https://github.com/yourusername/NNovBot/discussions)**
