@@ -37,7 +37,7 @@
 ### 1. Клонируй репозиторий
 
 ```bash
-git clone https://github.com/yourusername/NNovBot.git
+git clone https://github.com/I-am-a-cup/NNovgor_bot
 cd NNovBot
 ```
 
@@ -372,7 +372,7 @@ ssh user@your-server-ip
 sudo apt update && sudo apt install -y python3 python3-pip git
 
 # 3. Клонируй репозиторий
-git clone https://github.com/yourusername/NNovBot.git
+git clone https://github.com/I-am-a-cup/NNovgor_bot.git
 cd NNovBot
 
 # 4. Установи пакеты
